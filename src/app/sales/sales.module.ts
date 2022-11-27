@@ -14,6 +14,12 @@ import { SortedComponent } from './pages/sorted/sorted.component';
     BasicsComponent,
     SortedComponent
   ],
+  exports: [
+    NumbersComponent,
+    NoCommonsComponent,
+    BasicsComponent,
+    SortedComponent
+  ],
   imports: [
     CommonModule
   ]
