@@ -4,7 +4,7 @@ import { NumbersComponent } from './pages/numbers/numbers.component';
 import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { SortedComponent } from './pages/sorted/sorted.component';
-
+import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { SortedComponent } from './pages/sorted/sorted.component';
     SortedComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimeNgModule
   ]
 })
 export class SalesModule { }
