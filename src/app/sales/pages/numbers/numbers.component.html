@@ -13,13 +13,19 @@
         </p-card>
     </div>
     <div class="col-4">
-        <p-card>
-
+        <p-card
+            header="Ventas totales"
+            subheader="Del presente año"
+        >
+        {{ sales | currency: 'USD':'symbol-narrow':'1.4-4' }}
         </p-card>
     </div>
     <div class="col-4">
-        <p-card>
-
+        <p-card
+            header="Ganancia porcentual"
+            subheader="Del presente año"
+        >
+        {{ percentage | percent: '2.2-2' }}
         </p-card>
     </div>
 </div>
