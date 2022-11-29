@@ -1,1 +1,25 @@
-<p>numbers works!</p>
+<div class="text-layout">
+    <h2>Pipes numerales</h2>
+    <p>Pipes incluídos en Angular, usualmente en el Common Module</p>
+</div>
+<div class="grid">
+    <div class="col-4">
+        <p-card 
+            header="Ventas totales"
+            subheader="Del presente año"
+        >
+        <i class="pi pi-dollar"></i>
+        {{ sales | number: '1.2-2' }}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card>
+
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card>
+
+        </p-card>
+    </div>
+</div>
