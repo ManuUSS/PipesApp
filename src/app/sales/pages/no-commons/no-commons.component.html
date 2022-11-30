@@ -3,7 +3,7 @@
     <p>Pipes incluídos en Angular, usualmente en el Common Module</p>
 </div>
 <div class="grid">
-    <div class="col-6 relative">
+    <div class="col-6">
         <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
             <p>
                 Saludos {{ name }}, es un placer {{ gender | i18nSelect: invitationMap }} a este curso.
@@ -11,7 +11,7 @@
             <button pButton 
                 type="button"
                 label="Cambiar nombre"  
-                class="p-button-raised p-button-rounded absolute bottom-2 left-5"
+                class="p-button-raised p-button-rounded"
                 (click)="changePerson()"
             >
                 <i class="pi pi-pencil mr-2"></i>
@@ -27,7 +27,7 @@
             <button pButton 
                 type="button"
                 label="Borrar cliente" 
-                class="p-button-raised p-button-rounded p-button-danger absolute bottom-2 left-5"
+                class="p-button-raised p-button-rounded p-button-danger"
                 (click)="deleteClient()"
             >
                 <i class="pi pi-trash mr-2"></i>
@@ -49,6 +49,11 @@
                     <b>{{ item.key | titlecase}}:</b>{{ item.value }}
                 </li>
             </ul>
+        </p-fieldset>
+    </div>
+    <div class="col">
+        <p-fieldset legend="Json Pipe" [toggleable]="true">
+            <pre>{{ person | json }}</pre>
         </p-fieldset>
     </div>
 </div>
