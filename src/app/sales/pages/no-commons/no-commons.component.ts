@@ -20,6 +20,12 @@ export class NoCommonsComponent {
     'other': 'tenemos # clientes esperando.'
   };
 
+  public person = {
+    name: 'Manuel',
+    age: 21,
+    address: 'San Ramón, Alajuela, Costa Rica'
+  };
+
   public changePerson() {
     this.name = 'María';
     this.gender = 'Femenino';
