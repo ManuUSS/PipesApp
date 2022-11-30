@@ -13,4 +13,10 @@ export class NoCommonsComponent {
     'Femenino': 'invitarla'
   };
 
+  public clients: string[] = ['Maria', 'Pedro', 'Juan', 'Manuel'];
+  public clientsMap = {
+    '=0': 'no tenemos ningún cliente esperando.',
+    '=1': 'tenemos un cliente esperando.',
+    'other': 'tenemos # clientes esperando.'
+  };
 }

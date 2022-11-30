@@ -10,7 +10,7 @@
     </div>
     <div class="col">
         <p-fieldset legend="i18nPlurar Pipe" [toggleable]="true">
-
+            Actualmente tenemos {{ clients.length | i18nPlural: clientsMap}}
         </p-fieldset>
     </div>
 </div>
