@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class NoCommonsComponent {
 
   public name: string = 'Manuel';
-  public gender: string = 'Femenino';
+  public gender: string = 'Masculino';
   public invitationMap = {
     'Masculino': 'invitarlo',
     'Femenino': 'invitarla'
@@ -19,4 +19,13 @@ export class NoCommonsComponent {
     '=1': 'tenemos un cliente esperando.',
     'other': 'tenemos # clientes esperando.'
   };
+
+  public changePerson() {
+    this.name = 'María';
+    this.gender = 'Femenino';
+  }
+
+  public deleteClient() {
+    this.clients.pop();
+  }
 }
