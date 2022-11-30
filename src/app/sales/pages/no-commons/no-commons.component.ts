@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-commons',
@@ -25,6 +26,15 @@ export class NoCommonsComponent {
     age: 21,
     address: 'San Ramón, Alajuela, Costa Rica'
   };
+
+  public myObservable = interval( 1000 );
+  public promiseValue = new Promise( (resolve, reject) => {
+    
+    setTimeout(() => {
+      resolve('Tenemos data de promesa');
+    }, 3500);
+  
+  });
 
   public changePerson() {
     this.name = 'María';

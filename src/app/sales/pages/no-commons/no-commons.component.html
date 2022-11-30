@@ -56,4 +56,16 @@
             <pre>{{ person | json }}</pre>
         </p-fieldset>
     </div>
+    <div class="col-12">
+        <p-fieldset legend="Async Pipe" [toggleable]="true">
+            <div class="inline">
+                <p class="inline mr-2">Obteniendo datos de un observable</p>
+                <pre class="inline">{{ myObservable | async }}</pre>
+            </div>
+            <div class="">
+                <p *ngIf="!(promiseValue | async)">Resolviendo promesa</p>
+                <pre>{{ promiseValue | async }}</pre>
+            </div>
+        </p-fieldset>
+    </div>
 </div>
