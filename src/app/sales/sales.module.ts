@@ -6,13 +6,16 @@ import { BasicsComponent } from './pages/basics/basics.component';
 import { SortedComponent } from './pages/sorted/sorted.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
+import { UppercasePipe } from './pipes/uppercase.pipe';
+
 
 @NgModule({
   declarations: [
     NumbersComponent,
     NoCommonsComponent,
     BasicsComponent,
-    SortedComponent
+    SortedComponent,
+    UppercasePipe
   ],
   exports: [
     NumbersComponent,
