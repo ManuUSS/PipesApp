@@ -8,6 +8,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 import { UppercasePipe } from './pipes/uppercase.pipe';
 import { FlyPipe } from './pipes/fly.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FlyPipe } from './pipes/fly.pipe';
     BasicsComponent,
     SortedComponent,
     FlyPipe,
-    UppercasePipe
+    UppercasePipe,
+    SortPipe
   ],
   exports: [
     NumbersComponent,
