@@ -12,15 +12,45 @@
                 Original: Hola mundo <br/>
                 {{ "Hola mundo" | uppercasepipe:onUpperCase }}
             </p>
-            <button pButton 
-                type="button"
-                label="Cambiar texto"  
-                class="p-button-raised p-button-rounded"
-                (click)="changeCase()"
-            >
-                <i class="pi pi-pencil mr-2"></i>
-            </button>
+            
         </p-card>
+    </div>
+</div>
+<p-toolbar>
+    <div class="p-toolbar-group-left">
+    </div>
+    <div class="p-toolbar-group-right">
+        <button pButton 
+            type="button"
+            label="Cambiar texto"  
+            class="p-button-raised p-button-rounded p-button-warning mr-1"
+            (click)="changeCase()"
+        >
+            <i class="pi pi-pencil mr-2"></i>
+        </button>
+        <button pButton icon="pi pi-sort" label="Por nombre" class="mr-1"></button>
+        <button pButton icon="pi pi-sort" label="Por valores" class="mr-1 p-button-success"></button>
+        <button pButton icon="pi pi-sort" label="Por color" class="mr-1 p-button-help"></button>
+    </div>
+</p-toolbar>
+<div class="grid">
+    <div class="col mt-3">
+        <p-table [value]="heroes">
+            <ng-template pTemplate="header">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Vuela</td>
+                    <td>Color</td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-heroe>
+                <tr>
+                    <td>{{ heroe.name }}</td>
+                    <td>{{ heroe.fly }}</td>
+                    <td>{{ heroe.color }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
     </div>
 </div>
 

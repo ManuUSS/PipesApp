@@ -1,17 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Heroe, Color } from '../../interfaces/sales.interfaces';
 
 @Component({
   selector: 'app-sorted',
   templateUrl: './sorted.component.html'
 })
-export class SortedComponent implements OnInit {
+export class SortedComponent {
 
   public onUpperCase : boolean = true;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  public heroes: Heroe[] = [
+    {
+      name: 'Superman',
+      fly: true,
+      color: Color.azul
+    },
+    {
+      name: 'Robin',
+      fly: false,
+      color: Color.verde
+    },
+    {
+      name: 'Aquaman',
+      fly: false,
+      color: Color.azul
+    },
+    {
+      name: 'Flash',
+      fly: true,
+      color: Color.rojo
+    },
+    {
+      name: 'Batman',
+      fly: false,
+      color: Color.negro
+    },
+    {
+      name: 'Victor',
+      fly: true,
+      color: Color.negro
+    }
+  ];
 
   public changeCase = ():void => {
     this.onUpperCase = !this.onUpperCase;
