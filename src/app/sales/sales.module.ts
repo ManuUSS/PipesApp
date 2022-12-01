@@ -7,6 +7,7 @@ import { SortedComponent } from './pages/sorted/sorted.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 import { UppercasePipe } from './pipes/uppercase.pipe';
+import { FlyPipe } from './pipes/fly.pipe';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
     NoCommonsComponent,
     BasicsComponent,
     SortedComponent,
+    FlyPipe,
     UppercasePipe
   ],
   exports: [
