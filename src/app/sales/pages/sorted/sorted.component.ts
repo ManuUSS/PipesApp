@@ -42,8 +42,14 @@ export class SortedComponent {
     }
   ];
 
+  public orderBy: string = '';
+
   public changeCase = ():void => {
     this.onUpperCase = !this.onUpperCase;
+  }
+
+  changeOrder = ( value: string ): void => {
+    this.orderBy = value;
   }
 
 }

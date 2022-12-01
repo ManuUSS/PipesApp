@@ -29,14 +29,23 @@
     </div>
     <div class="p-toolbar-group-right">
         
-        <button pButton icon="pi pi-sort" label="Por nombre" class="mr-1"></button>
-        <button pButton icon="pi pi-sort" label="Por valores" class="mr-1 p-button-success"></button>
-        <button pButton icon="pi pi-sort" label="Por color" class="mr-1 p-button-help"></button>
+        <button pButton icon="pi pi-sort" label="Por nombre"  
+            class="mr-1" (click)="changeOrder('name')"
+        
+        ></button>
+        <button pButton icon="pi pi-sort" label="Por valores"  
+            class="mr-1 p-button-success" (click)="changeOrder('fly')"
+        
+        ></button>
+        <button pButton icon="pi pi-sort" label="Por color"  
+            class="mr-1 p-button-help" (click)="changeOrder('color')"
+        
+        ></button>
     </div>
 </p-toolbar>
 <div class="grid">
     <div class="col mt-3">
-        <p-table [value]="heroes">
+        <p-table [value]="heroes | sort:orderBy">
             <ng-template pTemplate="header">
                 <tr>
                     <td>Nombre</td>
