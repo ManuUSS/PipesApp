@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SortedComponent implements OnInit {
 
+  public onUpperCase : boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public changeCase = ():void => {
+    this.onUpperCase = !this.onUpperCase;
   }
 
 }
